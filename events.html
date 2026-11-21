@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sports Events | Treasure Scientia School</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+
+            /* BLACK + HORSE-BLOOD BACKGROUND */
+            background:
+                linear-gradient(
+                    135deg,
+                    #000000 0%,
+                    #000000 45%,
+                    #6b1e2b 100%
+                );
+
+            color: white;
+            min-height: 100vh;
+        }
+
+        /* HEADER */
+        header {
+            background:
+                linear-gradient(
+                    135deg,
+                    #000000,
+                    #6b1e2b,
+                    #000000
+                );
+
+            color: white;
+            text-align: center;
+            padding: 35px 15px;
+
+            border-bottom: 4px solid #6b1e2b;
+
+            box-shadow:
+                0 0 25px rgba(107, 30, 43, 0.8);
+        }
+
+        header h1 {
+            font-size: 34px;
+            font-weight: bold;
+            letter-spacing: 1px;
+
+            text-shadow:
+                0 0 10px #ffffff,
+                0 0 20px #6b1e2b;
+        }
+
+        header p {
+            margin-top: 10px;
+            font-size: 17px;
+            font-weight: bold;
+            color: #f0c3ca;
+
+            letter-spacing: 2px;
+        }
+
+        /* NAVIGATION */
+        nav {
+            background: #000000;
+            text-align: center;
+            padding: 17px;
+
+            border-bottom: 3px solid #6b1e2b;
+
+            box-shadow:
+                0 0 15px rgba(107, 30, 43, 0.7);
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+
+            font-weight: bold;
+            font-size: 16px;
+
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #f0c3ca;
+
+            text-shadow:
+                0 0 10px #ffffff,
+                0 0 15px #6b1e2b;
+        }
+
+        /* MAIN CONTAINER */
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            margin: 35px auto;
+        }
+
+        /* PAGE TITLE */
+        h2 {
+            color: white;
+            text-align: center;
+
+            font-size: 28px;
+            margin-bottom: 12px;
+
+            text-shadow:
+                0 0 10px #ffffff,
+                0 0 20px #6b1e2b;
+        }
+
+        .intro-text {
+            text-align: center;
+            color: #f0c3ca;
+
+            font-weight: bold;
+            font-size: 15px;
+
+            margin-bottom: 35px;
+        }
+
+        /* EVENT CARD */
+        .event {
+            background:
+                linear-gradient(
+                    145deg,
+                    #000000 0%,
+                    #18090d 50%,
+                    #6b1e2b 100%
+                );
+
+            margin: 25px auto;
+            padding: 28px;
+
+            max-width: 650px;
+
+            border: 2px solid #6b1e2b;
+            border-radius: 18px;
+
+            box-shadow:
+                0 0 15px rgba(107, 30, 43, 0.7),
+                inset 0 0 15px rgba(107, 30, 43, 0.2);
+
+            transition: 0.4s;
+        }
+
+        /* HOVER EFFECT */
+        .event:hover {
+            transform: translateY(-7px) scale(1.01);
+
+            border-color: #f0c3ca;
+
+            box-shadow:
+                0 0 20px #6b1e2b,
+                0 0 35px rgba(240, 195, 202, 0.4);
+        }
+
+        /* EVENT TITLE */
+        .event h3 {
+            color: white;
+
+            font-size: 22px;
+            margin-bottom: 18px;
+
+            text-shadow:
+                0 0 8px #ffffff,
+                0 0 15px #6b1e2b;
+        }
+
+        /* EVENT LIST */
+        .event ul {
+            margin: 10px 0 20px 25px;
+        }
+
+        .event li {
+            color: #f0c3ca;
+
+            font-weight: bold;
+
+            margin: 8px 0;
+        }
+
+        /* EVENT TEXT */
+        .event p {
+            color: #eeeeee;
+
+            line-height: 1.7;
+
+            font-size: 15px;
+
+            margin-top: 12px;
+        }
+
+        /* DATE */
+        .event strong {
+            color: white;
+
+            display: inline-block;
+
+            margin-top: 5px;
+
+            padding: 8px 12px;
+
+            border-left: 4px solid #f0c3ca;
+
+            background: rgba(107, 30, 43, 0.45);
+
+            text-shadow:
+                0 0 6px #ffffff;
+        }
+
+        /* FOOTER */
+        footer {
+            background:
+                linear-gradient(
+                    135deg,
+                    #000000,
+                    #6b1e2b
+                );
+
+            color: white;
+
+            text-align: center;
+
+            padding: 28px 15px;
+
+            margin-top: 45px;
+
+            border-top: 4px solid #6b1e2b;
+
+            box-shadow:
+                0 -5px 20px rgba(107, 30, 43, 0.5);
+        }
+
+        footer p {
+            margin: 7px;
+            font-weight: bold;
+        }
+
+        footer p:first-child {
+            font-size: 18px;
+
+            text-shadow:
+                0 0 10px #ffffff;
+        }
+
+        /* MOBILE */
+        @media (max-width: 600px) {
+
+            header h1 {
+                font-size: 27px;
+            }
+
+            header p {
+                font-size: 14px;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 7px;
+            }
+
+            .container {
+                width: 94%;
+            }
+
+            h2 {
+                font-size: 23px;
+            }
+
+            .event {
+                padding: 22px;
+            }
+
+            .event h3 {
+                font-size: 19px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+
+        <h1>Treasure Scientia School</h1>
+
+        <p>SPORTS EVENTS</p>
+
+    </header>
+
+
+    <!-- NAVIGATION -->
+    <nav>
+
+        <a href="index.html">Home</a>
+
+        <a href="sports.html">Sports</a>
+
+        <a href="events.html">Events</a>
+
+    </nav>
+
+
+    <!-- MAIN CONTENT -->
+    <div class="container">
+
+        <h2>Our School Sports Events 🏆</h2>
+
+        <p class="intro-text">
+            Discover the sporting activities that bring
+            our students together.
+        </p>
+
+
+        <!-- INDOOR GAMES -->
+        <div class="event">
+
+            <h3>🏃 In door games</h3>
+
+            <ul>
+
+                <li>What's</li>
+
+                <li>ludo Naija</li>
+
+                <li>Table Tennis</li>
+
+                <li>Chess</li>
+
+            </ul>
+
+            <p>
+                Students compete in different sporting activities
+                and represent their school houses.
+            </p>
+
+            <p>
+                <strong>
+                    Date: Monday, 8th- Wednesday, 10th Fed, 2027
+                </strong>
+            </p>
+
+        </div>
+
+
+        <!-- FOOTBALL -->
+        <div class="event">
+
+            <h3>⚽ Football Competition</h3>
+
+            <p>
+                Students showcase their football skills,
+                teamwork and sportsmanship.
+            </p>
+
+            <p>
+                <strong>
+                    Date:Thursday, 11th and Friday, 12th Fed 2027
+                </strong>
+            </p>
+
+        </div>
+
+
+        <!-- ATHLETICS -->
+        <div class="event">
+
+            <h3>🏃 Athletics Competition</h3>
+
+            <p>
+                Students participate in running races and
+                other athletic activities.
+            </p>
+
+            <p>
+                <strong>
+                    Date: Monday, 15th - Wednesday 17th Fed 2027
+                </strong>
+            </p>
+
+        </div>
+
+
+        <!-- PRIZE GIVING -->
+        <div class="event">
+
+            <h3>🏅 Prize-Giving Ceremony</h3>
+
+            <p>
+                Outstanding students and winning teams
+                can be recognised for their achievements.
+            </p>
+
+            <p>
+                <strong>
+                    Date: Friday, 19th Fed 2027
+                </strong>
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <p>Treasure Scientia School Sports</p>
+
+        <p>Play. Compete. Grow. Excel.</p>
+
+        <p>© 2027/2028</p>
+
+    </footer>
+
+</body>
+</html>

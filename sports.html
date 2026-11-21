@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Treasure Scientia Sports</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #000000 0%,
+                    #000000 45%,
+                    #6B1E2B 100%
+                );
+
+            color: white;
+
+            min-height: 100vh;
+        }
+
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        header {
+            background:
+                linear-gradient(
+                    135deg,
+                    #000000,
+                    #6B1E2B,
+                    #000000
+                );
+
+            color: white;
+
+            text-align: center;
+
+            padding: 35px 15px;
+
+            border-bottom: 3px solid #8f3042;
+
+            box-shadow:
+                0 0 25px rgba(107, 30, 43, 0.8);
+        }
+
+        header h1 {
+            font-size: 34px;
+
+            font-weight: 900;
+
+            margin-bottom: 12px;
+
+            letter-spacing: 1px;
+
+            text-shadow:
+                0 0 10px #6B1E2B,
+                0 0 22px #8f3042;
+        }
+
+        header p {
+            color: #f0c3ca;
+
+            font-size: 16px;
+
+            font-weight: bold;
+
+            letter-spacing: 1px;
+
+            margin-top: 8px;
+        }
+
+
+        /* =========================
+           NAVIGATION
+        ========================= */
+
+        nav {
+            background-color: #6B1E2B;
+
+            padding: 16px;
+
+            text-align: center;
+
+            border-bottom: 2px solid #000000;
+        }
+
+        nav a {
+            color: white;
+
+            text-decoration: none;
+
+            font-weight: bold;
+
+            margin: 0 12px;
+
+            font-size: 16px;
+
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #000000;
+
+            text-shadow: 0 0 10px white;
+        }
+
+
+        /* =========================
+           MAIN CONTAINER
+        ========================= */
+
+        .container {
+            width: 90%;
+
+            max-width: 1000px;
+
+            margin: 35px auto;
+        }
+
+
+        /* =========================
+           INTRODUCTION
+        ========================= */
+
+        .intro {
+            background:
+                linear-gradient(
+                    145deg,
+                    #6B1E2B,
+                    #000000
+                );
+
+            padding: 30px;
+
+            border: 2px solid #8f3042;
+
+            border-radius: 18px;
+
+            margin-bottom: 35px;
+
+            box-shadow:
+                0 0 25px rgba(107, 30, 43, 0.6);
+
+            text-align: center;
+
+            transition: 0.3s;
+        }
+
+        .intro:hover {
+            transform: translateY(-4px);
+
+            box-shadow:
+                0 0 30px rgba(143, 48, 66, 0.9);
+        }
+
+        .intro h2 {
+            color: white;
+
+            font-size: 28px;
+
+            font-weight: 900;
+
+            margin-bottom: 15px;
+
+            text-shadow:
+                0 0 12px #6B1E2B;
+        }
+
+        .intro p {
+            color: #f0c3ca;
+
+            font-weight: bold;
+
+            line-height: 1.7;
+
+            font-size: 16px;
+        }
+
+
+        /* =========================
+           SECTION
+        ========================= */
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+
+        /* =========================
+           SECTION TITLE
+        ========================= */
+
+        .section-title {
+            background:
+                linear-gradient(
+                    90deg,
+                    #6B1E2B,
+                    #8f3042,
+                    #6B1E2B
+                );
+
+            color: white;
+
+            padding: 18px;
+
+            border: 2px solid #000000;
+
+            border-radius: 14px 14px 0 0;
+
+            font-size: 25px;
+
+            font-weight: 900;
+
+            text-align: center;
+
+            text-shadow:
+                0 0 10px #000000;
+
+            box-shadow:
+                0 0 18px rgba(107, 30, 43, 0.7);
+        }
+
+
+        /* =========================
+           SPORTS GRID
+        ========================= */
+
+        .sports-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 20px;
+
+            background-color: #000000;
+
+            padding: 22px;
+
+            border: 2px solid #6B1E2B;
+
+            border-top: none;
+
+            border-radius: 0 0 14px 14px;
+        }
+
+
+        /* =========================
+           SPORT CARDS
+        ========================= */
+
+        .sport-card {
+            background:
+                linear-gradient(
+                    145deg,
+                    #6B1E2B,
+                    #000000
+                );
+
+            border: 2px solid #8f3042;
+
+            border-radius: 16px;
+
+            padding: 25px 18px;
+
+            text-align: center;
+
+            min-height: 145px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: center;
+
+            transition: 0.3s;
+
+            box-shadow:
+                0 5px 18px rgba(107, 30, 43, 0.45);
+        }
+
+        .sport-card:hover {
+            transform: translateY(-7px) scale(1.02);
+
+            border-color: white;
+
+            box-shadow:
+                0 0 28px rgba(143, 48, 66, 0.9);
+        }
+
+        .sport-card h3 {
+            color: white;
+
+            font-size: 21px;
+
+            font-weight: 900;
+
+            margin-bottom: 10px;
+
+            text-shadow:
+                0 0 8px #6B1E2B;
+        }
+
+        .sport-card p {
+            color: #f0c3ca;
+
+            font-weight: bold;
+
+            font-size: 14px;
+
+            line-height: 1.5;
+        }
+
+
+        /* =========================
+           BOTTOM MESSAGE
+        ========================= */
+
+        .sports-message {
+            text-align: center;
+
+            padding: 40px 20px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #000000,
+                    #6B1E2B
+                );
+
+            border-top: 2px solid #8f3042;
+
+            border-bottom: 2px solid #8f3042;
+
+            margin-top: 20px;
+        }
+
+        .sports-message h2 {
+            color: white;
+
+            font-size: 25px;
+
+            font-weight: 900;
+
+            text-shadow:
+                0 0 12px #6B1E2B;
+
+            margin-bottom: 10px;
+        }
+
+        .sports-message p {
+            color: #f0c3ca;
+
+            font-weight: bold;
+
+            line-height: 1.6;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background:
+                linear-gradient(
+                    90deg,
+                    #6B1E2B,
+                    #000000,
+                    #6B1E2B
+                );
+
+            color: white;
+
+            text-align: center;
+
+            padding: 28px 15px;
+
+            margin-top: 40px;
+
+            border-top: 3px solid #000000;
+        }
+
+        footer p {
+            font-weight: bold;
+
+            margin: 7px;
+
+            color: #f0c3ca;
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 600px) {
+
+            header h1 {
+                font-size: 27px;
+            }
+
+            header p {
+                font-size: 14px;
+            }
+
+            nav a {
+                display: inline-block;
+
+                margin: 7px;
+            }
+
+            .container {
+                width: 94%;
+            }
+
+            .sports-grid {
+                grid-template-columns: 1fr;
+
+                padding: 15px;
+            }
+
+            .intro {
+                padding: 22px 16px;
+            }
+
+            .section-title {
+                font-size: 21px;
+            }
+
+            .sport-card {
+                min-height: 130px;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header>
+
+    <h1>
+        🏆 Treasure Scientia Sports
+    </h1>
+
+    <p>
+        Sports and Recreational Activities
+    </p>
+
+</header>
+
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
+<nav>
+
+    <a href="index.html">
+        Home
+    </a>
+
+    <a href="sports.html">
+        Sports
+    </a>
+
+    <a href="events.html">
+        Events
+    </a>
+
+</nav>
+
+
+<!-- =========================
+     MAIN CONTENT
+========================= -->
+
+<div class="container">
+
+
+    <!-- INTRODUCTION -->
+
+    <div class="intro">
+
+        <h2>
+            Welcome to Treasure Scientia Sports
+        </h2>
+
+        <p>
+            Welcome to the Treasure Scientia Sports page.
+            This page contains the sporting activities and
+            indoor recreational games available at
+            Treasure Scientia School.
+        </p>
+
+    </div>
+
+
+    <!-- =========================
+         SPORTING ACTIVITIES
+    ========================= -->
+
+    <section class="section">
+
+        <div class="section-title">
+            🏆 Sporting Activities
+        </div>
+
+
+        <div class="sports-grid">
+
+
+            <div class="sport-card">
+
+                <h3>
+                    ⚽ Football
+                </h3>
+
+                <p>
+                    Football activities at Treasure Scientia School.
+                </p>
+
+            </div>
+
+
+            <div class="sport-card">
+
+                <h3>
+                    🏓 Table Tennis
+                </h3>
+
+                <p>
+                    Table tennis is one of the sporting activities.
+                </p>
+
+            </div>
+
+
+            <div class="sport-card">
+
+                <h3>
+                    🏃 Relay Activities
+                </h3>
+
+                <p>
+                    Students participate in relay activities.
+                </p>
+
+            </div>
+
+
+            <div class="sport-card">
+
+                <h3>
+                    🪢 Skipping
+                </h3>
+
+                <p>
+                    Skipping is included among the physical activities.
+                </p>
+
+            </div>
+
+
+            <div class="sport-card">
+
+                <h3>
+                    🔺 Sports Cones
+                </h3>
+
+                <p>
+                    Sports cones are used during sporting activities.
+                </p>
+
+            </div>
+
+
+            <div class="sport-card">
+
+                <h3>
+                    👕 Sports Bibs
+                </h3>
+
+                <p>
+                    Sports bibs are used during sporting activities.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         INDOOR GAMES
+    ========================= -->
+
+    <section class="section">
+
+        <div class="section-title">
+            🎲 Indoor Games
+        </div>
+
+
+        <div class="sports-grid">
+
+
+            <div class="sport-card">
+
+                <h3>
+                    🎲 Ludo
+                </h3>
+
+                <p>
+                    An indoor recreational board game.
+                </p>
+
+            </div>
+
+
+            <div class="sport-card">
+
+                <h3>
+                    🎩 Monopoly
+                </h3>
+
+                <p>
+                    An indoor board game for students.
+                </p>
+
+            </div>
+
+
+            <div class="sport-card">
+
+                <h3>
+                    🃏 WHOT
+                </h3>
+
+                <p>
+                    A popular indoor card game.
+                </p>
+
+            </div>
+
+
+            <div class="sport-card">
+
+                <h3>
+                    🔤 Scrabble
+                </h3>
+
+                <p>
+                    A word-based indoor board game.
+                </p>
+
+            </div>
+
+
+            <div class="sport-card">
+
+                <h3>
+                    ♟️ Chess
+                </h3>
+
+                <p>
+                    A strategic indoor board game.
+                </p>
+
+            </div>
+
+
+            <div class="sport-card">
+
+                <h3>
+                    ⚫ Draughts
+                </h3>
+
+                <p>
+                    A classic indoor board game.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+</div>
+
+
+<!-- =========================
+     MESSAGE
+========================= -->
+
+<section class="sports-message">
+
+    <h2>
+        Play. Compete. Grow. Excel.
+    </h2>
+
+    <p>
+        Building teamwork, discipline and sporting excellence
+        at Treasure Scientia School.
+    </p>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <p>
+        Treasure Scientia School
+    </p>
+
+    <p>
+        Sports & Recreational Activities
+    </p>
+
+    <p>
+        &copy; 2026 Treasure Scientia Sports
+    </p>
+
+</footer>
+
+
+<!-- =========================
+     IMAGE
+========================= -->
+
+<img
+    src="Image/images (5).jpeg"
+    alt=""
+    style="
+        width:100%;
+        max-width:2000px;
+        border-radius:15px;
+        display:block;
+        margin-top:20px;
+    "
+>
+
+
+</body>
+</html>

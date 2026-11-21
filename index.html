@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Treasure Scientia School Sports</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Arial", sans-serif;
+            background: #000000;
+            color: #ffffff;
+        }
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        header {
+            background: linear-gradient(
+                135deg,
+                #000000,
+                #6B1E2B,
+                #000000
+            );
+
+            text-align: center;
+            padding: 35px 15px 40px;
+
+            border-bottom: 3px solid #8f3042;
+
+            box-shadow: 0 0 25px rgba(107, 30, 43, 0.8);
+        }
+
+        header img {
+            width: 80%;
+            max-width: 200px;
+            border-radius: 18px;
+
+            border: 3px solid #8f3042;
+
+            box-shadow: 0 0 20px rgba(143, 48, 66, 0.8);
+        }
+
+        header h1 {
+            margin-top: 20px;
+
+            color: #ffffff;
+
+            font-size: 34px;
+
+            font-weight: 900;
+
+            letter-spacing: 1px;
+
+            text-shadow:
+                0 0 8px #6B1E2B,
+                0 0 18px #8f3042;
+        }
+
+        header p {
+            margin-top: 10px;
+
+            color: #f0c3ca;
+
+            font-size: 16px;
+
+            font-weight: bold;
+
+            letter-spacing: 1px;
+        }
+
+
+        /* =========================
+           NAVIGATION
+        ========================= */
+
+        nav {
+            background-color: #6B1E2B;
+
+            padding: 16px;
+
+            text-align: center;
+
+            border-bottom: 2px solid #000000;
+        }
+
+        nav a {
+            color: #ffffff;
+
+            text-decoration: none;
+
+            margin: 0 12px;
+
+            font-weight: bold;
+
+            font-size: 16px;
+
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #000000;
+
+            text-shadow: 0 0 10px white;
+        }
+
+
+        /* =========================
+           HERO SECTION
+        ========================= */
+
+        .hero {
+            min-height: 420px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            text-align: center;
+
+            padding: 50px 20px;
+
+            background:
+                linear-gradient(
+                    rgba(0, 0, 0, 0.80),
+                    rgba(107, 30, 43, 0.75)
+                );
+
+            border-bottom: 3px solid #6B1E2B;
+        }
+
+        .hero-content {
+            max-width: 850px;
+        }
+
+        .hero h2 {
+            font-size: 42px;
+
+            color: #ffffff;
+
+            font-weight: 900;
+
+            margin-bottom: 18px;
+
+            text-shadow:
+                0 0 10px #6B1E2B,
+                0 0 25px #8f3042;
+        }
+
+        .hero h3 {
+            font-size: 23px;
+
+            color: #f0c3ca;
+
+            margin-bottom: 18px;
+
+            font-weight: bold;
+        }
+
+        .hero p {
+            font-size: 17px;
+
+            line-height: 1.7;
+
+            color: #ffffff;
+
+            font-weight: bold;
+
+            max-width: 700px;
+
+            margin: auto;
+        }
+
+
+        /* =========================
+           DISCOVER SECTION
+        ========================= */
+
+        .discover {
+            background-color: #000000;
+
+            padding: 45px 20px;
+
+            text-align: center;
+        }
+
+        .discover h2 {
+            color: #ffffff;
+
+            font-size: 30px;
+
+            font-weight: 900;
+
+            margin-bottom: 10px;
+
+            text-shadow: 0 0 12px #6B1E2B;
+        }
+
+        .discover > p {
+            color: #f0c3ca;
+
+            font-weight: bold;
+
+            margin-bottom: 30px;
+        }
+
+
+        /* =========================
+           CARDS
+        ========================= */
+
+        .cards {
+            max-width: 1000px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 20px;
+        }
+
+        .card {
+            background:
+                linear-gradient(
+                    145deg,
+                    #6B1E2B,
+                    #000000
+                );
+
+            padding: 30px 20px;
+
+            border-radius: 18px;
+
+            border: 2px solid #8f3042;
+
+            min-height: 190px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: center;
+
+            transition: 0.3s;
+
+            box-shadow:
+                0 5px 20px rgba(107, 30, 43, 0.5);
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+
+            box-shadow:
+                0 0 25px rgba(143, 48, 66, 0.9);
+
+            border-color: #ffffff;
+        }
+
+        .card .icon {
+            font-size: 40px;
+
+            margin-bottom: 12px;
+        }
+
+        .card h3 {
+            color: #ffffff;
+
+            font-size: 21px;
+
+            font-weight: 900;
+
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #f0c3ca;
+
+            font-weight: bold;
+
+            line-height: 1.5;
+        }
+
+
+        /* =========================
+           FEATURED SPORT
+        ========================= */
+
+        .featured {
+            background:
+                linear-gradient(
+                    135deg,
+                    #6B1E2B,
+                    #000000
+                );
+
+            padding: 45px 20px;
+
+            text-align: center;
+
+            border-top: 2px solid #8f3042;
+
+            border-bottom: 2px solid #8f3042;
+        }
+
+        .featured h2 {
+            color: #ffffff;
+
+            font-size: 30px;
+
+            margin-bottom: 20px;
+
+            font-weight: 900;
+        }
+
+        .featured-box {
+            max-width: 650px;
+
+            margin: auto;
+
+            padding: 30px;
+
+            background-color: #000000;
+
+            border: 3px solid #6B1E2B;
+
+            border-radius: 20px;
+
+            box-shadow:
+                0 0 25px rgba(107, 30, 43, 0.8);
+        }
+
+        .featured-box h3 {
+            color: #ffffff;
+
+            font-size: 30px;
+
+            margin-bottom: 12px;
+
+            font-weight: 900;
+        }
+
+        .featured-box p {
+            color: #f0c3ca;
+
+            font-weight: bold;
+
+            line-height: 1.6;
+        }
+
+
+        /* =========================
+           SPORTS LIST
+        ========================= */
+
+        .sports-list {
+            background-color: #000000;
+
+            text-align: center;
+
+            padding: 40px 20px;
+        }
+
+        .sports-list h2 {
+            color: #6B1E2B;
+
+            font-size: 25px;
+
+            font-weight: 900;
+
+            line-height: 1.8;
+
+            text-shadow:
+                0 0 10px rgba(143, 48, 66, 0.7);
+        }
+
+
+        /* =========================
+           QUOTE
+        ========================= */
+
+        .quote {
+            background:
+                linear-gradient(
+                    135deg,
+                    #000000,
+                    #6B1E2B
+                );
+
+            text-align: center;
+
+            padding: 45px 20px;
+        }
+
+        .quote h2 {
+            color: #ffffff;
+
+            font-size: 25px;
+
+            font-weight: 900;
+
+            line-height: 1.5;
+
+            text-shadow:
+                0 0 10px #6B1E2B;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background-color: #6B1E2B;
+
+            color: #ffffff;
+
+            text-align: center;
+
+            padding: 25px 15px;
+
+            border-top: 3px solid #000000;
+        }
+
+        footer p {
+            font-weight: bold;
+
+            margin: 7px;
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 700px) {
+
+            header h1 {
+                font-size: 27px;
+            }
+
+            .hero h2 {
+                font-size: 32px;
+            }
+
+            .hero h3 {
+                font-size: 19px;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            nav a {
+                display: inline-block;
+
+                margin: 7px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header>
+
+    <img
+        src="Image/images.jpeg"
+        alt="Treasure Scientia School"
+    >
+
+    <h1>
+        🏆 Treasure Scientia School
+    </h1>
+
+    <p>
+        SPORTS DEPARTMENT
+    </p>
+
+    <p>
+        Play Together. Grow Together. Win Together.
+    </p>
+
+</header>
+
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
+<nav>
+
+    <a href="index.html">
+        Home
+    </a>
+
+    <a href="sports.html">
+        Sports
+    </a>
+
+    <a href="events.html">
+        Events
+    </a>
+
+</nav>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <h2>
+            Discover the Energy.
+        </h2>
+
+        <h3>
+            Experience the Competition.
+        </h3>
+
+        <p>
+            Welcome to the Treasure Scientia School Sports
+            Department. Discover our sporting activities,
+            celebrate student talent and explore the exciting
+            world of sports at TSS.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     DISCOVER
+========================= -->
+
+<section class="discover">
+
+    <h2>
+        Explore Treasure Scientia Sports
+    </h2>
+
+    <p>
+        There is more to discover inside.
+    </p>
+
+
+    <div class="cards">
+
+
+        <!-- SPORTS -->
+
+        <div class="card">
+
+            <div class="icon">
+                🏆
+            </div>
+
+            <h3>
+                Explore Our Sports
+            </h3>
+
+            <p>
+                Discover the sporting activities
+                and indoor games available at TSS.
+            </p>
+
+        </div>
+
+
+        <!-- EVENTS -->
+
+        <div class="card">
+
+            <div class="icon">
+                📅
+            </div>
+
+            <h3>
+                Upcoming Events
+            </h3>
+
+            <p>
+                Find out what is happening
+                in the TSS Sports Department.
+            </p>
+
+        </div>
+
+
+        <!-- DEPARTMENT -->
+
+        <div class="card">
+
+            <div class="icon">
+                ⭐
+            </div>
+
+            <h3>
+                Our Sports Department
+            </h3>
+
+            <p>
+                Discover the people, activities
+                and sporting spirit behind TSS Sports.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FEATURED SPORT
+========================= -->
+
+<section class="featured">
+
+    <h2>
+        ⚽ Featured Sport
+    </h2>
+
+    <div class="featured-box">
+
+        <h3>
+            FOOTBALL
+        </h3>
+
+        <p>
+            Teamwork • Discipline • Skill • Competition
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     SPORTS LIST
+========================= -->
+
+<section class="sports-list">
+
+    <h2>
+        ⚽ Football
+        &nbsp; | &nbsp;
+        🏓 Table Tennis
+        &nbsp; | &nbsp;
+        🏸 Badminton
+    </h2>
+
+    <h2>
+        🎲 Indoor Games
+        &nbsp; | &nbsp;
+        🏆 Teamwork
+        &nbsp; | &nbsp;
+        ⭐ Excellence
+    </h2>
+
+</section>
+
+
+<!-- =========================
+     MOTIVATIONAL MESSAGE
+========================= -->
+
+<section class="quote">
+
+    <h2>
+        "Play Together. Grow Together. Win Together."
+    </h2>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <p>
+        Treasure Scientia School Sports
+    </p>
+
+    <p>
+        © 2027/2028
+    </p>
+
+</footer>
+
+
+</body>
+</html>
